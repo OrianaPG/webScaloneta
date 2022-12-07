@@ -19,7 +19,7 @@ main {
     align-items: center;
 }
 
-.logoQatar {
+#logoQatar {
     display: none;
 }
 

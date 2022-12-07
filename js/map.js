@@ -7,16 +7,16 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
-let icono = L.icon({
+let icon = L.icon({
     iconUrl: "https://img.icons8.com/fluency/512/map-pin.png",
     iconSize: [60, 60],
     iconAnchor: [22, 44],
     popupAnchor: [8, -41],
 });
 
-let marker = L.marker(center, { icon: icono }).addTo(map);
+let marker = L.marker(center, { icon: icon }).addTo(map);
 
-marker.bindPopup("<b>Ubicación actual</b>").openPopup();
+marker.bindPopup("<b>Estamos en Qatar :)</b>").openPopup();
 
 const objetoMapa = [
     {
@@ -52,8 +52,15 @@ const objetoMapa = [
     ,];
 
 
-// Buscar documentación de map
-let select = document.getElementById("seleccionarJugadores");
-let arrayJugadores = objetoMapa.map(element => element = `<option>${objeto.jugador}</option>`);
+let select = document.querySelector("select");
 
-console.log(arrayJugadores);
+let arrayJugadores = objetoMapa.map(({ jugador }) => `<option>${jugador}</option>`).toString().replace(",", " ");
+
+select.innerHTML += arrayJugadores
+
+function changeMap() {
+    const objeto = objetoMapa.find((item) => item.jugador === select.value);
+    map.setView(new L.LatLng(...objeto.coordenada), 11);
+    marker = L.marker(objeto.coordenada, { icon }).addTo(map);
+    marker.bindPopup(`<b>${objeto.jugador}</b><br>${objeto.ciudad}`).openPopup();
+}
