@@ -1,0 +1,152 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
+#login {
+    background: url(./img/fondoMessi.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+main {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoQatar {
+    display: none;
+}
+
+#form-login {
+    background-color: #FFFFFF;
+    box-shadow: 0 px 6px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    padding: 32px 38px;
+}
+
+h1 {
+    font-weight: 700;
+    text-align: center;
+}
+
+input {
+    background: #FFFFFF;
+    border: 1px solid #C6C6C6;
+    box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.18);
+    border-radius: 5px;
+}
+
+.btn-login {
+    background: #374785;
+    border: 1px solid #24305E;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    width: 350px;
+}
+
+nav {
+    z-index: 2;
+}
+
+.navbar-brand {
+    font-style: italic;
+    font-weight: 600;
+
+    color: #119DD8;
+}
+
+#logoGuayerd {
+    padding-right: 8px;
+}
+
+.btn-cerrarSesion {
+    background: #374785;
+    color: #FFFFFF;
+    border: 1px solid #24305E;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+
+#bodyMapa {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#seleccionarJugadores {
+    font-family: 'Raleway', sans-serif;
+    background: #FFFFFF;
+    border: 1px solid #C6C6C6;
+    box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.18);
+    border-radius: 5px;
+    padding: 8px;
+    width: 420px;
+    position: fixed;
+    z-index: 1;
+    align-self: center;
+    top: 80px;
+}
+
+#map {
+    height: 100%;
+    z-index: 0;
+}
+
+footer {
+    height: 48px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: #FFFFFF;
+    border-radius: 0px 0px 0px 5px;
+}
+
+footer>a>img {
+    padding: 0px 12px 0px 0px;
+}
+
+@media (max-width: 500px) {
+    #login {
+        background: #ffffff00;
+    }
+
+    main {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .logoQatar {
+        display: block;
+    }
+
+    #seleccionarJugadores {
+        width: 80%;
+    }
+
+    .btn-cerrarSesion {
+        width: 100%;
+    }
+
+    .btn {
+        background: #374785;
+        border: 1px solid #24305E;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 5px;
+    }
+
+    footer {
+        justify-content: center;
+    }
+}
