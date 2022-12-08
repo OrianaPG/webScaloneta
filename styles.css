@@ -124,11 +124,12 @@ footer>a>img {
 
     main {
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: center;
     }
 
     #logoQatar {
-        display: block;
+        display: flex;
+        padding-bottom: 24px;
     }
 
     #seleccionarJugadores {
