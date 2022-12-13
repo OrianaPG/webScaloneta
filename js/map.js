@@ -159,7 +159,7 @@ const objetoMapa = [
         coordenada: [-33.0169, -61.0431],
         ciudad: "Pujato",
     },
-,];
+    ,];
 
 let select = document.querySelector("select");
 
@@ -172,4 +172,17 @@ function changeMap() {
     map.setView(new L.LatLng(...objeto.coordenada), 11);
     marker = L.marker(objeto.coordenada, { icon }).addTo(map);
     marker.bindPopup(`<b>${objeto.jugador}</b><br>${objeto.ciudad}`).openPopup();
+}
+
+let form = document.querySelector("form");
+form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    localStorage.removeItem("logged");
+    window.location.href = "./index.html";
+});
+
+if (localStorage.getItem("logged", "true")) {
+}
+else {
+    window.location.href = "./index.html";
 }

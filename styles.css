@@ -4,6 +4,10 @@
     font-family: 'Raleway', sans-serif;
 }
 
+:root {
+    --bordes: 5px
+}
+
 #login {
     background: url(./img/fondoMessi.png) no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -26,7 +30,7 @@ main {
 #form-login {
     background-color: #FFFFFF;
     box-shadow: 0 px 6px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 5px;
+    border-radius: var(--bordes);
     padding: 32px 38px;
 }
 
@@ -39,14 +43,14 @@ input {
     background: #FFFFFF;
     border: 1px solid #C6C6C6;
     box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.18);
-    border-radius: 5px;
+    border-radius: var(--bordes);
 }
 
 .btn-login {
     background: #374785;
     border: 1px solid #24305E;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 5px;
+    border-radius: var(--bordes);
     width: 350px;
 }
 
@@ -57,7 +61,6 @@ nav {
 .navbar-brand {
     font-style: italic;
     font-weight: 600;
-
     color: #119DD8;
 }
 
@@ -70,7 +73,7 @@ nav {
     color: #FFFFFF;
     border: 1px solid #24305E;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 5px;
+    border-radius: var(--bordes);
 }
 
 #bodyMapa {
@@ -86,7 +89,7 @@ nav {
     background: #FFFFFF;
     border: 1px solid #C6C6C6;
     box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.18);
-    border-radius: 5px;
+    border-radius: var(--bordes);
     padding: 8px;
     width: 400px;
     position: fixed;
@@ -144,7 +147,7 @@ footer>a>img {
         background: #374785;
         border: 1px solid #24305E;
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
-        border-radius: 5px;
+        border-radius: var(--bordes);
     }
 
     footer {
