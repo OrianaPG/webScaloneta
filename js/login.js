@@ -1,7 +1,17 @@
+// Devolver a map si logueó
+
+if (localStorage.getItem("logged", "true")) {
+    window.location.href = "./map.html";
+}
+
+// Credenciales
+
 const credenciales = {
     email: "estudiante@guayerd.com",
     password: "123456",
 };
+
+// Iniciar sesión
 
 let form = document.querySelector("form");
 form.addEventListener("submit", (event) => {
@@ -16,7 +26,3 @@ form.addEventListener("submit", (event) => {
         alert("Las credenciales introducidas son inválidas");
     }
 });
-
-if (localStorage.getItem("logged", "true")) {
-    window.location.href = "./map.html";
-}

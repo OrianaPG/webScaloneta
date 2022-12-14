@@ -1,3 +1,13 @@
+// Devolver a index si no logueó
+
+if (localStorage.getItem("logged", "true")) {
+}
+else {
+    window.location.href = "./index.html";
+}
+
+// Mapa
+
 let center = [25.2807, 51.5217];
 
 let map = L.map("map").setView(center, 12);
@@ -17,6 +27,8 @@ let icon = L.icon({
 let marker = L.marker(center, { icon: icon }).addTo(map);
 
 marker.bindPopup("<b>Estamos en Qatar :)</b>").openPopup();
+
+// Jugadores
 
 const objetoMapa = [
     {
@@ -174,15 +186,11 @@ function changeMap() {
     marker.bindPopup(`<b>${objeto.jugador}</b><br>${objeto.ciudad}`).openPopup();
 }
 
+// Cerrar sesión
+
 let form = document.querySelector("form");
 form.addEventListener("submit", (event) => {
     event.preventDefault();
     localStorage.removeItem("logged");
     window.location.href = "./index.html";
 });
-
-if (localStorage.getItem("logged", "true")) {
-}
-else {
-    window.location.href = "./index.html";
-}
