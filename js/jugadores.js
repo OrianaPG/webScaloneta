@@ -18,9 +18,31 @@ form.addEventListener("submit", (event) => {
 
 // Pedir datos a la API
 
-let respuesta = fetch("https://cors-anywhere.herokuapp.com/https://scaloneta-api.vercel.app/jugadores")
+//? let respuesta = fetch("https://cors-anywhere.herokuapp.com/https://scaloneta-api.vercel.app/jugadores")
+
+let respuesta = fetch("./js/jugadores.json")
     .then(respuesta => respuesta.json())
-    .then(data => {
-        let jugadores = data;
+    .then(json => {
+        let jugadores = json.map(json => 
+            `<div class="col-12 col-md-4 p-3 float-start">
+                <div class="card">
+                    <div class="img-wrapper">
+                        <span id="numeroCamiseta">${json.dorsal}</span>
+                        <img src="https://julioavantt.github.io/guayerd-project-images/img/${json.dorsal}.jpg" class="card-img-top" alt="${json.name}">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">${json.name}</h5>
+                        <p class="card-text">Edad: ${json.edad} años</p>
+                        <p class="card-text">Posición: ${json.posicion}</p>
+                        <p class="card-text">Peso: ${json.statsFisico.peso} kg</p>
+                        <p class="card-text">Altura: ${json.statsFisico.altura} m</p>
+                        <p class="card-text">Equipo actual: ${json.equipoActual}</p>
+                        <p class="card-text">Fecha de nacimiento: ${json.fechaNacimiento}</p>
+                    </div>
+                </div>
+            </div>`
+        );
+        let section = document.querySelector("section");
+        section.innerHTML = jugadores.join(" ");
     })
     .catch(error => console.log("Error: ", error));

@@ -66,6 +66,26 @@ h1 {
     color: #212529;
 }
 
+jugadores .card .img-wrapper {
+    height: 250px;
+    overflow: hidden;
+}
+
+.img-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#numeroCamiseta {
+    position: absolute;
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 33px;
+    color: #FFFFFF;
+    padding: 2px 8px 0 0;
+}
+
 input {
     background: #FFFFFF;
     border: 1px solid #C6C6C6;
