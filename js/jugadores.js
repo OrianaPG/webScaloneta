@@ -24,7 +24,7 @@ let respuesta = fetch("./js/jugadores.json")
     .then(respuesta => respuesta.json())
     .then(json => {
         let jugadores = json.map(json => 
-            `<div class="col-12 col-md-4 p-3 float-start">
+            `<div class="col-12 col-md-4 p-2 float-start">
                 <div class="card">
                     <div class="img-wrapper">
                         <span id="numeroCamiseta">${json.dorsal}</span>
