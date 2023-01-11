@@ -27,6 +27,11 @@ main {
     display: none;
 }
 
+#inicioSesion {
+    font-weight: 700;
+    text-align: center;
+}
+
 #form-login {
     background-color: #FFFFFF;
     box-shadow: 0 px 6px 4px rgba(0, 0, 0, 0.25);
