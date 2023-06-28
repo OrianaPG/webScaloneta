@@ -6,7 +6,7 @@
 
 Web interactiva donde se puede ver, en un mapa, dónde nació cada uno de los jugadores de la selección Argentina de fútbol masculino, además de la información relacionada con cada uno de ellos.
 
-[Visitala!](http://proyecto-final-guayerd.vercel.app/)
+[Visitala!](https://web-scaloneta.vercel.app/)
 
 ## Overview
 
